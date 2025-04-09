@@ -36,6 +36,9 @@ dependencies {
 	// Thymeleaf + Security интеграция
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'  // Интеграция Thymeleaf и Spring Security 6
 
+	implementation 'org.postgresql:postgresql:42.6.0'
+	compileOnly("javax.servlet:servlet-api:2.3")
+
 	// Lombok
 	compileOnly 'org.projectlombok:lombok'  // Генерация кода
 	annotationProcessor 'org.projectlombok:lombok'  // Обработка аннотаций Lombok

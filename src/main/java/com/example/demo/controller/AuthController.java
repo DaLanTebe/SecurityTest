@@ -11,16 +11,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController // Указывает, что это контроллер REST
-@RequestMapping("/api/auth") // Базовый URL для всех эндпоинтов в этом контроллере
+@RequestMapping("/auth") // Базовый URL для всех эндпоинтов в этом контроллере
 public class AuthController {
 
     private final UserService userService;
-    private final JwtService jwtService;
 
     @Autowired // Внедрение зависимостей через конструктор
-    public AuthController(UserService userService, JwtService jwtService) {
+    public AuthController(UserService userService) {
         this.userService = userService;
-        this.jwtService = jwtService;
     }
 
     // Эндпоинт для регистрации нового пользователя
